@@ -1,6 +1,6 @@
 <template>
-  <div class="task" :class="stateClass">
-     <span class="close" @click="$emit('taskDeleted')">X</span>
+  <div class="task" :class="stateClass" @click="$emit('taskStateChanged')">
+     <span class="close" @click.stop="$emit('taskDeleted')">X</span>
      <p>{{ task.name }}</p>
   </div>
 </template>
@@ -30,13 +30,14 @@ export default {
    border-radius: 8px;
    margin: 5px;
    padding: 10px;
-   font-size: 1.2em;
+   font-size: 1.3em;
    font-weight: 300;
    cursor: pointer;
    user-select: none;
    display: flex;
    justify-content: center;
    align-items: center;
+   overflow: auto;
 }
 .pending {
    background-color: #f44336;
