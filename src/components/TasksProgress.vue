@@ -20,14 +20,27 @@ export default {
       height: 20px;
       border: 2px solid #fff5;
       border-radius: 10px;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
    }
    .progress-value {
       position: absolute;
-      left: 50%;
    }
    .progress-bar {
       background-color: green;
-      height: 20px;
+      height: 100%;
+      border-radius: 5px;
+      align-self: flex-start;
       transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+   }
+   @media (max-width: 600px) {
+      .tasks-progress {
+         width: 90%;
+      }
+      .tasks-progress {
+         margin-top: 13px;
+      }
    }
 </style>

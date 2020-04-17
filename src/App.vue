@@ -40,7 +40,7 @@ export default {
 		addTask(task) {
 			const sameName = t => t.name === task.name
 			const reallyNew = this.tasks.filter(sameName).length == 0
-			if(reallyNew) {
+			if(reallyNew && task.name != '') {
 				this.tasks.push({
 					name: task.name,
 					pending: task.pending || true
@@ -79,6 +79,6 @@ export default {
 	#app h1 {
 		margin-bottom: 5px;
 		font-weight: 300;
-		font-size: 3rem;
+		font-size: 2rem;
 	}
 </style>

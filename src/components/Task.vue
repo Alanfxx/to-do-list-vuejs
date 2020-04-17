@@ -69,4 +69,9 @@ export default {
    justify-content: center;
    align-items: top;
 }
+@media (max-width: 600px) {
+   .task {
+      width: 90%;
+   }
+}
 </style>

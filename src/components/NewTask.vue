@@ -1,8 +1,8 @@
 <template>
   <div class="new-task">
-     <input type="text" v-model="name" @keydown.enter="add"
+      <input type="text" v-model="name" @keydown.enter="add"
          class='form-element' placeholder='Nova tarefa?'>
-     <button class='form-element' @click="add">+</button>
+      <button class='form-element' @click="add">+</button>
   </div>
 </template>
 
@@ -24,7 +24,10 @@ export default {
 
 <style>
    .new-task {
-      margin: 35px;
+      margin: 35px 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
    }
 
    .form-element {
@@ -35,7 +38,7 @@ export default {
       color: #fff;
    }
    input.form-element {
-      width: 300px;
+      width: 422px;
       background: #fff2;
       border-top-left-radius: 8px;
       border-bottom-left-radius: 8px;
@@ -45,5 +48,14 @@ export default {
       background: rgb(52, 197, 255);
       border-top-right-radius: 8px;
       border-bottom-right-radius: 8px;
+   }
+
+   @media (max-width: 600px) {
+      input.form-element {
+         width: 75%;
+      }
+      .new-task {
+         margin: 15px 0;
+      }
    }
 </style>
